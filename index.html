@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Don't Starve Farm Guide</title>
+        <link rel="shortcut icon" href="icon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main-content_c">
+            <!-- first section --> 
+            <div class="first-section">
+                <div class="box-filter">
+                    <div class="filter-item" data-filtertype="autumn">
+                        <img src="src/images/misc/autumn.png" class="filter-icon">
+                    </div>
+                    <div class="filter-item" data-filtertype="winter">
+                        <img src="src/images/misc/winter.png" class="filter-icon">
+                    </div>
+                    <div class="filter-item" data-filtertype="spring">
+                        <img src="src/images/misc/spring.png" class="filter-icon">
+                    </div>
+                    <div class="filter-item" data-filtertype="summer">
+                        <img src="src/images/misc/summer.png" class="filter-icon">
+                    </div>
+                </div>
+                <div class="box"></div>
+            </div>
+
+            <!-- second section --> 
+            <div class="second-section">
+                <div class="turf">
+                </div>
+                
+                <div class="fcm-calculator">
+                    <div class="formula">
+                        <div class="icon">
+                            <img src="src/images/misc/formula.png" alt="">
+                        </div>
+                        <div class="value" id="formula-sum">0</div>
+                    </div>
+                    <div class="compost">
+                        <div class="icon">
+                            <img src="src/images/misc/compost.png" alt="">
+                        </div>
+                        <div class="value" id="compost-sum">0</div>
+                    </div>
+                    <div class="manure">
+                        <div class="icon">
+                            <img src="src/images/misc/manure.png" alt="">
+                        </div>
+                        <div class="value" id="manure-sum">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- third section --> 
+            <div class="third-section">
+                <div class="crops-table_c"></div>
+            </div>
+            <div id="buffer"></div>
+        </div>
+        <script src="crops.js"></script>
+        <script src="resources.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
