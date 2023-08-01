@@ -270,12 +270,12 @@ for (crop in crops) {
             </div>
             `
             bufferElement.appendChild(newInfoCard)
-        } else {
-            document.querySelector('.info-card').remove()
         }
-        
     });
     
+    
+    const w = toRem(4.5);
+    const h = toRem(4.5);
 
     // DRAGSTART EVENT //
     newBoxItem.addEventListener('dragstart', dragstartEvent => {
@@ -283,10 +283,14 @@ for (crop in crops) {
             boxItemElement.classList.remove("--info");
         });
 
+        dragImage = document.createElement('div')
+        dragImage.appendChild(newBoxItem.querySelector('.seeds').cloneNode())
+
         newBoxItem.querySelector('.seeds').style.opacity = '40%';
 
         dragstartEvent.dataTransfer.setData('text/plain', [newBoxItem.dataset.croptype])
         dragstartEvent.dataTransfer.setData('custom/source', 'allowed')
+        dragstartEvent.dataTransfer.setDragImage(dragImage, 0, 0);
     })
 
     // DRAGEND EVENT //
@@ -300,8 +304,6 @@ for (crop in crops) {
     let touchLocation;
     let notCloned = true
     let isMoving = false
-    const w = toRem(4.5);
-    const h = toRem(4.5);
 
     newBoxItem.addEventListener('touchmove', touchmoveEvent => {
         touchmoveEvent.preventDefault()

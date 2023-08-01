@@ -27,8 +27,27 @@ body {
 
 /* V V V V V V V V V V */
 
-.main-content_c {
+.header {
     background-color: lightslategray;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github {
+    display: flex;
+    text-decoration: none;
+    color: #1B2A31;
+}
+
+.github-icon {
+    display: block;
+    height: 30px;
+}
+
+.main-content_c {
     display: flex;
     flex-direction: column;
     align-items: center;
